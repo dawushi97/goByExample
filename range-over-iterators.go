@@ -45,6 +45,9 @@ func genFib() iter.Seq[int] {
                 return
             }
             a, b = b, a+b
+            // if(a>10) {
+            //     break
+            // }
         }
     }
 }
@@ -61,6 +64,9 @@ func main() {
 
     all := slices.Collect(lst.All())
     fmt.Println("all:", all)
+    
+    // fib:=slices.Collect(genFib())
+    // fmt.Println("fib:",fib)
 
     for n := range genFib() {
 
